@@ -9,6 +9,7 @@ TO-DO:      Probably nothing, maybe more advanced way of waiting for creation th
 INFO:       
   Waits for valid active windows explorer / grabs directory, creates empty "new.txt" file there then selects it
   Because right-clicking is so 1996
+  And it saves about 1.5 seconds on a task I repeat very often
 Change-Log:
   1.0 Newly created, probably no updates needed
 

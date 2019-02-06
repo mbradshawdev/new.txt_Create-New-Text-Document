@@ -49,12 +49,12 @@ Loop
   ToolTip Looking for destination folder...`nIndent: "%IndentString%"`nPlease click on a valid Windows Explorer window (folder)
 }
  
-FileAppend, , %currDir%\new.txt		;append ..nothing! aka create
-Sleep 100                           ;Seems long enough
-Send new.                           ;Select the file with n-e-w-. keystrokes (primitive but quick and easy)
+FileAppend, , %currDir%\new.txt         ;append ..nothing! aka create
+Sleep 100                               ;Seems long enough
+Send new.                               ;Select the file with n-e-w-. keystrokes (primitive but quick and easy)
 
 Return
 
-$~Esc::   ;$~Hotkey sends original [ESC] keystroke and closes app
+$~Esc::                                 ;$~Hotkey sends original [ESC] keystroke and closes app
 ToolTip BYE!
 ExitApp

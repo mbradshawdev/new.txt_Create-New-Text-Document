@@ -5,7 +5,7 @@
 /*
 Version:    1.0
 NOTES:      Newly created, probably no updates needed
-TO-DO:      Probably nothing, maybe more advanced way of waiting for creation then select incase HD is sleeping 
+TO-DO:      Probably nothing, maybe more advanced way of waiting for creation then select incase HD is sleeping or idk
 INFO:       
   Waits for valid active windows explorer / grabs directory, creates empty "new.txt" file there then selects it
   Because right-clicking is so 1996
@@ -17,11 +17,11 @@ Change-Log:
 ;---------------------------------------------------------------------------------------------------------
 ;==SETTINGS===============================================================================================
 
-#NoEnv                       ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn                      ; Enable warnings to assist with detecting common errors.
+#NoEnv                          ; Recommended for performance and compatibility with future AutoHotkey releases.
+; #Warn                         ; Enable warnings to assist with detecting common errors.
 #SingleInstance Force
-SendMode Input               ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+SendMode Input                  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%     ; Ensures a consistent starting directory.
 
 ;---------------------------------------------------------------------------------------------------------
 ;==PROGRAM================================================================================================
@@ -35,8 +35,8 @@ Loop
 
 Loop
 { ;GetDirLoop
- ControlGetText, currDir, ToolbarWindow322, A			;Get Filepath (until a valid one is found)
- StringTrimLeft, currDir, currDir, 9				    ;Removes "Address: "
+ ControlGetText, currDir, ToolbarWindow322, A           ;Get Filepath (until a valid one is found)
+ StringTrimLeft, currDir, currDir, 9                    ;Removes "Address: "
  if RegExMatch(currDir, "[A-Z]:\\")                     ;Range A-Z, literal :, escaped literal \, aka C:\ or D:\ etc
  {                                                      ;
   ToolTip                                               ;Clear tooltip

@@ -17,11 +17,11 @@ Change-Log:
 ;---------------------------------------------------------------------------------------------------------
 ;==SETTINGS===============================================================================================
 
-#NoEnv                       ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn                      ; Enable warnings to assist with detecting common errors.
+#NoEnv                          ; Recommended for performance and compatibility with future AutoHotkey releases.
+; #Warn                         ; Enable warnings to assist with detecting common errors.
 #SingleInstance Force
-SendMode Input               ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+SendMode Input                  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%     ; Ensures a consistent starting directory.
 
 ;---------------------------------------------------------------------------------------------------------
 ;==PROGRAM================================================================================================
@@ -35,8 +35,8 @@ Loop
 
 Loop
 { ;GetDirLoop
- ControlGetText, currDir, ToolbarWindow322, A			;Get Filepath (until a valid one is found)
- StringTrimLeft, currDir, currDir, 9				    ;Removes "Address: "
+ ControlGetText, currDir, ToolbarWindow322, A           ;Get Filepath (until a valid one is found)
+ StringTrimLeft, currDir, currDir, 9                    ;Removes "Address: "
  if RegExMatch(currDir, "[A-Z]:\\")                     ;Range A-Z, literal :, escaped literal \, aka C:\ or D:\ etc
  {                                                      ;
   ToolTip                                               ;Clear tooltip
